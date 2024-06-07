@@ -65,6 +65,7 @@ jobs:
       with:
         context: .
         file: ./Dockerfile
+        context: ./
         push: true
         tags: jkim711/spring-boot-junit5-example:latest
 
