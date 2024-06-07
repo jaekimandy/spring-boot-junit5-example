@@ -61,11 +61,10 @@ jobs:
       run: ls -al
       
     - name: Build and push Docker image
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v1
       with:
-        context: .
         file: ./Dockerfile
-        context: ./
+        context: .
         push: true
         tags: jkim711/spring-boot-junit5-example:latest
 
