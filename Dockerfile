@@ -1,5 +1,5 @@
 # Dockerfile
-FROM adoptopenjdk/openjdk17:alpine-jre
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
