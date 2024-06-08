@@ -74,6 +74,10 @@ jobs:
         push: true
         tags: jkim711/spring-boot-junit5-example:latest
 
+    - name: Pull Docker image from DockerHub
+      run: |
+        docker pull jkim711/spring-boot-junit5-example:latest
+    
     - name: Load Docker image into Kind
       run: |
         kind load docker-image jkim711/spring-boot-junit5-example:latest  
