@@ -74,14 +74,17 @@ jobs:
         push: true
         tags: jkim711/spring-boot-junit5-example:latest
 
-    - name: Configure kubectl for KIND
-      run: |
-        kubectl cluster-info --context kind-kind
-        kubectl config set-context --current --namespace=default
     - name: Load Docker image into Kind
-      run: |
-        kubectl config use-context kind-kind
-        kind load docker-image jkim711/spring-boot-junit5-example:latest        
+          run: |
+            kind load jkim711/spring-boot-junit5-example:latest 
+#    - name: Configure kubectl for KIND
+#      run: |
+#        kubectl cluster-info --context kind-kind
+#        kubectl config set-context --current --namespace=default
+#    - name: Load Docker image into Kind
+#      run: |
+#        kubectl config use-context kind-kind
+#        kind load docker-image jkim711/spring-boot-junit5-example:latest        
           
     - name: Deploy to Kind
       run: |
