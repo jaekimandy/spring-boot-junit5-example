@@ -74,6 +74,14 @@ jobs:
         push: true
         tags: jkim711/spring-boot-junit5-example:latest
 
+    - name: Load Docker image into Kind
+      run: |
+          kind load jkim711/spring-boot-junit5-example:latest --name kind-kind
+
+    - name: Deploy to Kind
+      run: |
+          kubectl apply -f ./deployment.yaml
+
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
@@ -84,6 +92,8 @@ jobs:
     #
     # - name: Build with Gradle 8.5
     #   run: gradle build
+
+    
 
   dependency-submission:
 
