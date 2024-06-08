@@ -59,12 +59,6 @@ jobs:
     
     - name: List contents of the current directory
       run: ls -al
-
-#    - name: Build Docker image
-#      run: docker build -t jkim711/spring-boot-junit5-example:latest .
-
-#    - name: Push Docker image
-#      run: docker push jkim711/spring-boot-junit5-example:latest
       
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
@@ -84,14 +78,6 @@ jobs:
     - name: Load Docker image into Kind
       run: |
         kind load docker-image jkim711/spring-boot-junit5-example:latest  
-#    - name: Configure kubectl for KIND
-#      run: |
-#        kubectl cluster-info --context kind-kind
-#        kubectl config set-context --current --namespace=default
-#    - name: Load Docker image into Kind
-#      run: |
-#        kubectl config use-context kind-kind
-#        kind load docker-image jkim711/spring-boot-junit5-example:latest        
           
     - name: Configure kubectl for KIND
       run: |
