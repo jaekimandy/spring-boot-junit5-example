@@ -74,6 +74,14 @@ jobs:
         push: true
         tags: jkim711/spring-boot-junit5-example:latest
 
+    - name: Setup KIND
+      uses: kactions/kind-setup@v1
+      with:
+        version: '0.12.0'
+
+    - name: Create KIND Cluster
+      run: kind create cluster --name kind
+
     - name: Pull Docker image from DockerHub
       run: |
         docker pull jkim711/spring-boot-junit5-example:latest
@@ -90,6 +98,11 @@ jobs:
 #        kubectl config use-context kind-kind
 #        kind load docker-image jkim711/spring-boot-junit5-example:latest        
           
+    - name: Configure kubectl for KIND
+      run: |
+        kubectl cluster-info --context kind-kind
+        kubectl config use-context kind-kind
+    
     - name: Deploy to Kind
       run: |
           kubectl apply -f ./deployment.yaml
