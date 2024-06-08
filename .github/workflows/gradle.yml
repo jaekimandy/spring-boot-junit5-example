@@ -75,8 +75,8 @@ jobs:
         tags: jkim711/spring-boot-junit5-example:latest
 
     - name: Load Docker image into Kind
-          run: |
-            kind load jkim711/spring-boot-junit5-example:latest 
+        run: |
+          kind load jkim711/spring-boot-junit5-example:latest 
 #    - name: Configure kubectl for KIND
 #      run: |
 #        kubectl cluster-info --context kind-kind
