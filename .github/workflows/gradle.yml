@@ -60,19 +60,19 @@ jobs:
     - name: List contents of the current directory
       run: ls -al
 
-    - name: Build Docker image
-      run: docker build -t jkim711/spring-boot-junit5-example:latest .
+#    - name: Build Docker image
+#      run: docker build -t jkim711/spring-boot-junit5-example:latest .
 
-    - name: Push Docker image
-      run: docker push jkim711/spring-boot-junit5-example:latest
+#    - name: Push Docker image
+#      run: docker push jkim711/spring-boot-junit5-example:latest
       
-#    - name: Build and push Docker image
-#      uses: docker/build-push-action@v3
-#      with:
-#        file: ./Dockerfile
-#        context: .
-#        push: true
-#        tags: jkim711/spring-boot-junit5-example:latest
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v3
+      with:
+        file: ./Dockerfile
+        context: .
+        push: true
+        tags: jkim711/spring-boot-junit5-example:latest
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
