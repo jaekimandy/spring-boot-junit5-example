@@ -22,19 +22,22 @@ Github actions was added onto this project to run
 
 # Instructions
 1. Go to Github Actions to run the Devops run
+
+   
 ![GithubActions](https://github.com/jaekimandy/spring-boot-junit5-example/assets/99704906/1d110abf-5fb2-4f2f-8d1a-84be38148f7c)
    
-2. Click on Build
+3. Click on Build
+
+
 
   ![GithubActions3](https://github.com/jaekimandy/spring-boot-junit5-example/assets/99704906/887cf8b9-99ab-4906-bcb7-3cdb88daf36d)
 
+  
+
 3. See details of the build   
+
+
 ![GithubActions2](https://github.com/jaekimandy/spring-boot-junit5-example/assets/99704906/dda65fff-bd0e-4cee-9eac-369c2831db75)
-
-
-
-
-
 
 
 
