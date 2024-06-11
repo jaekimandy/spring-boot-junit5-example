@@ -1,4 +1,18 @@
-# Example Project
+# Task 2: CI/CD Pipeline   
+• Design a CI/CD pipeline for a sample application using a tool of your choice (e.g., Jenkins, GitLab CI, GitHub Actions).   
+• The pipeline should include the following stages:   
+o Code checkout from a version control system   
+o Building and unit testing the application   
+o Containerizing the application using Docker   
+o Pushing the Docker image to a container registry   
+o Deploying the application to a Kubernetes cluster   
+• Provide the pipeline configuration code and a brief explanation of each stage.   
+
+# Instructions
+1. Go to Github Actions to run the Devops code
+
+
+
 ## Spring Boot 2.7.5 & Open API 3
 
 ## Related Article: 
