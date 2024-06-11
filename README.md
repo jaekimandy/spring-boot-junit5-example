@@ -8,6 +8,18 @@ o Pushing the Docker image to a container registry
 o Deploying the application to a Kubernetes cluster   
 • Provide the pipeline configuration code and a brief explanation of each stage.   
 
+# Backgrounnd
+
+'spring-boot-junit5-example' project is a Spring Java application with test code.    
+Github actions was added onto this project to run 
+1. Build the code
+2. Run Test routines
+3. Containerize the code into Docker
+4. Push Docker image to Dockerhub.com
+5. Deploy application to K8s using Kind
+
+
+
 # Instructions
 1. Go to Github Actions to run the Devops run
 ![GithubActions](https://github.com/jaekimandy/spring-boot-junit5-example/assets/99704906/1d110abf-5fb2-4f2f-8d1a-84be38148f7c)
